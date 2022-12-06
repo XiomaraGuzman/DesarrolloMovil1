@@ -9,7 +9,6 @@ public class Alimentacion extends Alojamiento{
 
 
 
-
     public Alimentacion() {
     }
 

@@ -72,15 +72,15 @@ public class Vuelos extends Alimentacion{
     public void agregarVuelo(){
         Scanner read= new Scanner(System.in);
 
-        System.out.println(" tipo de vuelo nacional/ internacional: ");
+        System.out.println("tipo de vuelo nacional/ internacional: ");
         this.setTipoVuelo(read.next());
-        System.out.println(" origen del vuelo: ");
+        System.out.println("origen del vuelo: ");
         this.setOrigen(read.next());
-        System.out.println(" destino del vuelo: ");
+        System.out.println("destino del vuelo: ");
         this.setDestino(read.next());
-        System.out.println(" salida del vuelo: ");
+        System.out.println("salida del vuelo: ");
         this.setFechaDeSalida(read.next());
-        System.out.println(" fecha de llegada del vuelo: ");
+        System.out.println("fecha de llegada del vuelo: ");
         this.setFechaDeLlegada(read.next());
         System.out.println("valor del vuelo: ");
         this.setValorVuelo(read.nextDouble());

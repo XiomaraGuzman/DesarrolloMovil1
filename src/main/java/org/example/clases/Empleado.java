@@ -38,10 +38,11 @@ public class Empleado extends Vuelos{
         return edad;
     }
 
-    public void setEdad(int edad) { if (edad<18){
+    public void setEdad(int edad) {
+        if (edad<18){
         System.out.println(" edad valida");
     }
-    else if (edad>110) {
+    else if (edad>50) {
         System.out.println("Edad invalida");
     }
     else {
@@ -56,11 +57,17 @@ public class Empleado extends Vuelos{
 
     public void setCargo(String cargo) {
         if (cargo.equals("senior")) {
-            this.cargo = cargo;
+
+        } else if (cargo.equals("")) {
+            System.out.println("invalido");
+
         } else if (cargo.equals("junior")) {
-            this.cargo = cargo;
-        }else {
-            System.out.println("Invalido");
+
+        }else if (cargo.equals("")){
+            System.out.println("invalido");
+
+        } else {
+            System.out.println("invalido");
         }
 
     }
@@ -84,12 +91,11 @@ public class Empleado extends Vuelos{
 
         System.out.println("Identificacion: ");
         this.setId(read.next());
-        System.out.println("Ingrese nombre  completo : ");
+        System.out.println("Ingrese nombre: ");
         this.setNombre (read.next());
-
         System.out.println("Edad : ");
         this.setEdad(read.nextInt());
-        System.out.println("cargo JR/SR ");
+        System.out.println("cargo Junior/Senior ");
         this.setCargo(read.next());
         System.out.println("salario : ");
         this.setSalario(read.nextDouble());
@@ -155,6 +161,12 @@ public class Empleado extends Vuelos{
                 +getCostoTrasporte();
         return costos;
     }
-
+    public void mostrarEmpleado(){
+        System.out.println("identidicacion: "+this.id);
+        System.out.println("nombre: "+this.nombre);
+        System.out.println("edad: "+this.edad);
+        System.out.println("cargo: "+this.cargo);
+        System.out.println("vuelo: "+this.getTipoVuelo());
+    }
 
 }

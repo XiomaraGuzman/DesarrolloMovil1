@@ -19,6 +19,7 @@ public class Main {
         ArrayList <Empleado> empleados = new ArrayList<Empleado>();
 
         int seleccion = 0;
+        int mostrarEmpleado = 0;
 
         System.out.println("0. Salir del menu");
         System.out.println("1. Empleado");
@@ -41,14 +42,19 @@ public class Main {
                 case 2:
 
                     for (Empleado empleado:empleados) {
-                        System.out.println("***********");
+
                         System.out.println("Nombre Empleado: "+ empleado.getNombre());
                         System.out.println("Cargo: "+empleado.getCargo());
                         System.out.println("Salario: "+empleado.getSalario());
                         System.out.println("Bono de Viaticos: "+empleado.bonoViejes());
                         System.out.println("Tipo de Vuelo: "+empleado.getTipoVuelo());
                         System.out.println("Gastos totales: "+empleado.calcularCostosTotales());
-                        System.out.println("***********");
+
+                        if(empleado.getTipoVuelo().equals(mostrarEmpleado)) {
+                            System.out.println("informaccion empleado: "+ mostrarEmpleado);
+                            break;
+                        }
+
                     }
 
                     break;

@@ -26,7 +26,7 @@ public class Transporte {
     public void setCostoTrasporte(double costoTrasporte) {
 
         if (costoTrasporte < 0) {
-            System.out.println("Ingrese un valor de transporte valido");
+            System.out.println("Valor correcto");
         }else {
             this.costoTrasporte = costoTrasporte;
         }
@@ -50,14 +50,13 @@ public class Transporte {
 
     public void agregarTransporte(){
         Scanner read= new Scanner(System.in);
-        System.out.println("**DATOS DEL TRASPORTE**");
-        System.out.println("Ingrese el tipo de transporte: ");
+        System.out.println("Tipo de transporte: ");
         this.setTipoTransporte(read.next());
-        System.out.println("Ingrese la fecha de inicio del transporte: ");
+        System.out.println("Fecha de inicio del transporte: ");
         this.setFechaInicioTrasporte(read.next());
-        System.out.println("Ingrese la fecha final del transporte: ");
+        System.out.println("Fecha final del transporte: ");
         this.setFechaFinDeTrasporte(read.next());
-        System.out.println("Ingrese el costo del transporte: ");
+        System.out.println("Valor del transporte: ");
         this.setCostoTrasporte(read.nextDouble());
     }
 }
