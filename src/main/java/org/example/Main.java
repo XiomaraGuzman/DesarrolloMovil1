@@ -15,15 +15,18 @@ public class Main {
 
         ArrayList <Viaticos> viaticos = new ArrayList<Viaticos>();
 
-
         ArrayList <Empleado> empleados = new ArrayList<Empleado>();
 
 
         int seleccion = 0;
-        int mostrarEmpleado = 0;
+
+        System.out.println("**********KJX********************");
 
 
         do {
+            System.out.println("*********************");
+            System.out.println("*******Menu**********");
+            System.out.println("*********************");
             System.out.println(" Ingrese opción del menu: ");
             System.out.println("0. Salir del menu");
             System.out.println("1. Empleado");
@@ -61,6 +64,7 @@ public class Main {
                     if (bandera) {
                         objetoViaticos = new Viaticos();
                         objetoViaticos.setIdEmpleado(Id);
+                        System.out.println("*******************");
                         System.out.println("Gastos de comida: " );
                         objetoViaticos.setCostoComida(read.nextDouble());
                         System.out.println("Costo viaje: ");
@@ -81,6 +85,9 @@ public class Main {
 
                 case  3:
                     for(Empleado empleado:empleados){
+                        System.out.println("**********************");
+                        System.out.println("Los empleados son: ");
+                        System.out.println("**********************");
                         System.out.println("El nombre del empleado es: " +empleado.getNombre());
                         System.out.println("El id del empleado es: "+ empleado.getId());
                         System.out.println("El cargo del empleado es: "+empleado.getCargo());
@@ -96,6 +103,7 @@ public class Main {
                                 System.out.println("La cuidad de destino es: "+viatico.getCiudadDestino());
                                 System.out.println("La cantidad de comida es: "+viatico.getCantidadComida());
                                 System.out.println("El costo de alojamiento es: "+viatico.getValorAlojamiento());
+                                System.out.println("***************************");
 
                             }
                         }

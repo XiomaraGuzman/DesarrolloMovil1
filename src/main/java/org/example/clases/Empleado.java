@@ -3,7 +3,7 @@ package org.example.clases;
 import java.util.Scanner;
 
 
-public class Empleado extends Vuelos{
+public class Empleado {
 
     private String id;
     private String nombre;
@@ -104,33 +104,9 @@ public class Empleado extends Vuelos{
 
 
     }
-    public double bonoViejes(){
-        double bonoViaje=0;
-        if (this.cargo.equals("junior") && this.getTipoVuelo().equals("nacional")){
-            bonoViaje = this.salario*0.20;
-        }else if (this.cargo.equals("junior") && this.getTipoVuelo().equals("internacional")){
-            bonoViaje = this.salario*0.40;
-        }else if (this.cargo.equals("senior") && this.getTipoVuelo().equals("nacional")){
-            bonoViaje = this.salario*0.30;
-        }else if (this.cargo.equals("senior") && this.getTipoVuelo().equals("internacional")){
-            bonoViaje = this.salario*0.50;
-        }else{
-            System.out.println("Error de digitacion de cargo o tipo de vuelo");
-        }
-        return bonoViaje;
-    }
 
-    public double calcularCostosTotales(){
-        double costos=this.getValorVuelo()+this.getValorComidas()+this.getValorAlojamiento()
-                +getCostoTrasporte();
-        return costos;
-    }
-    public void mostrarEmpleado(){
-        System.out.println("identidicacion: "+this.id);
-        System.out.println("nombre: "+this.nombre);
-        System.out.println("edad: "+this.edad);
-        System.out.println("cargo: "+this.cargo);
-        System.out.println("vuelo: "+this.getTipoVuelo());
-    }
+
+
+
 
 }
