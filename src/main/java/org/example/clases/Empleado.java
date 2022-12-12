@@ -40,7 +40,7 @@ public class Empleado extends Vuelos{
 
     public void setEdad(int edad) {
         if (edad<18){
-        System.out.println(" edad valida");
+        System.out.println(" Edad valida");
     }
     else if (edad>50) {
         System.out.println("Edad invalida");
@@ -56,6 +56,7 @@ public class Empleado extends Vuelos{
     }
 
     public void setCargo(String cargo) {
+        this.cargo = cargo;
         if (cargo.equals("senior")) {
 
         } else if (cargo.equals("")) {
@@ -93,50 +94,13 @@ public class Empleado extends Vuelos{
         this.setId(read.next());
         System.out.println("Ingrese nombre: ");
         this.setNombre (read.next());
-        System.out.println("Edad : ");
+        System.out.println("Edad: ");
         this.setEdad(read.nextInt());
-        System.out.println("cargo Junior/Senior ");
+        System.out.println("cargo Junior/Senior: ");
         this.setCargo(read.next());
-        System.out.println("salario : ");
+        System.out.println("salario: ");
         this.setSalario(read.nextDouble());
 
-        System.out.println("0. volver atras");
-        System.out.println("1. Alimentacion");
-        System.out.println("2. Alojamiento");
-        System.out.println("3. Trasporte");
-        System.out.println("4. Vuelos");
-
-        int opcion = 0;
-
-        do {
-            System.out.println(" Ingrese opción del menu: ");
-            opcion = read.nextInt();
-
-            switch(opcion){
-                case 1:
-                    this.agregarComidas();
-                    break;
-                case 2:
-                    this.agregarAlojamiento();
-                    break;
-                case 3:
-                    this.agregarTransporte();
-                    break;
-                case 4:
-                    this.agregarVuelo();
-                    break;
-                case 0:
-                    System.out.println("0. Salir del menu");
-                    System.out.println("1. Empleado");
-                    System.out.println("2. Mostrar Empleados");
-                    break;
-
-                default:
-                    System.out.println("ingresa una opcion valida");
-
-            }
-        }
-        while (opcion != 0);
 
 
     }
